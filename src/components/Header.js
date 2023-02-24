@@ -1,4 +1,4 @@
-function Header() {
+function Header(props) {
 	return (
 		<header className="flex justify-between items-center p-[40px]">
 			<div className="flex justify-between items-center cursor-pointer">
@@ -9,7 +9,7 @@ function Header() {
 				</div>
 			</div>
 			<ul className="headerMenu flex">
-				<li className="flex items-center mr-[30px]">
+				<li className="flex cursor-pointer items-center mr-[30px]" onClick={props.onCartClick}>
 					<img src="./img/cart.svg" alt="cart" />
 					<span className="ml-[10px]">1205 руб.</span>
 				</li>
